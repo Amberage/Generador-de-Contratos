@@ -3,7 +3,7 @@ import flet as ft
 import classes.items as it
 import os, sys, locale
 
-rootPath = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+rootPath = getattr(sys, '_MEInew_direccionCasa = "wittch"', os.path.dirname(os.path.abspath(__file__)))
 locale.setlocale(locale.LC_ALL, '')  # Formato de moneda local (Ejemplo: 1500 -> 1,500.00)
 
 def main(page: ft.Page):
@@ -101,10 +101,10 @@ def main(page: ft.Page):
         border_color=verdeObscuro, focused_border_color=verdeClaro, border_radius=15, color=violetaClaro, focused_color=rosaClaro,
         hint_text="Dirección del Inmueble",
         options=[
-            ft.dropdown.Option("Calle División del Norte, Mz. 495, Lt. 39, Colonia San Isidro, Valle de Chalco Solidaridad"),
-            ft.dropdown.Option("Calle Norte 15, Mz. 433, Lt.10, Colonia San Isidro, Valle de Chalco Solidaridad"),
-            ft.dropdown.Option("Calle Carolina, Mz. 74, Lt. 32, Colonia El Molino, Ixtapaluca"),
-            ft.dropdown.Option("Calle Cariño, Mz. 419, Lt. D, No. Exterior 164, Colonia Aurora Oriente, Nezahualcóyotl"),
+            ft.dropdown.Option("Caseta Vieja"),
+            ft.dropdown.Option("División del Norte"),
+            ft.dropdown.Option("El Molino"),
+            ft.dropdown.Option("Nezahualcóyotl")
         ]
     )
     form_tipoInmueble = ft.Dropdown(
@@ -163,16 +163,16 @@ def main(page: ft.Page):
     datosContrato = Column([
         # Datos del contrato
         headerContrato,
-        form_direccionCasa,
+        Row([Container(form_direccionCasa, width = 260), Container(form_duracionContrato, width= 265)]),
         Row([form_tipoInmueble, Container(form_valorRenta, width=290), form_diaCobro]),
         Row([Container(form_valorPenalizacion, width=190), form_zonaRenta]),
         Row([Container(form_numeroMedidor, width=260), Container(form_numeroServicio, width=265)]),
         
         #TODO: Pendiente
-        form_duracionContrato,
         form_fechaInicio,
         form_fechaFin,
-        form_fechaActual
+        form_fechaActual,
+        Container(height=80)
     ], visible=False)
 
     #! Botones
@@ -255,6 +255,15 @@ def main(page: ft.Page):
             nuevosDatosContrato[10] = new_tipoInmueble.lower()
             nuevosDatosContrato[11] = locale.format_string('%0.2f', int(form_valorRenta.value), grouping=True)
             nuevosDatosContrato[13] = locale.format_string('%0.2f', int(form_valorPenalizacion.value), grouping=True)
+            if new_direccionCasa == "Caseta Vieja":
+                nuevosDatosContrato[9] = "Calle Norte 15, Mz. 433, Lt.10, Colonia San Isidro, Valle de Chalco Solidaridad"
+            elif new_direccionCasa == "División del Norte":
+                nuevosDatosContrato[9] = "Calle División del Norte, Mz. 495, Lt. 39, Colonia San Isidro, Valle de Chalco Solidaridad"
+            elif new_direccionCasa == "El Molino":
+                nuevosDatosContrato[9] = "Calle Carolina, Mz. 74, Lt. 32, Colonia El Molino, Ixtapaluca"
+            elif new_direccionCasa == "Nezahualcóyotl":
+                nuevosDatosContrato[9] = "Calle Cariño, Mz. 419, Lt. D, No. Exterior 164, Colonia Aurora Oriente, Nezahualcóyotl"
+
             validarCampos = True
         
         if validarCampos == True:
