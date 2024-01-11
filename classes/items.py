@@ -1,7 +1,7 @@
 import flet
 from flet import *
 from flet import colors
-from typing import List
+import string
 
 #Styles: Colores
 violetaClaro = "#965FD4"
@@ -70,3 +70,7 @@ class banner(UserControl):
         height=45
     )
        return self.banner
+    
+def estilizarFecha(dia: str, mes: str, anio: str):
+    mes = mes.lower()
+    return f"{dia} del mes de {mes} del año {anio}"
