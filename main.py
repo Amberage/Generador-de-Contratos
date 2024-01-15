@@ -53,7 +53,7 @@ def main(page: ft.Page):
 		),
 		Container(
 		content=Image(
-		src=f"assets\\icons\\law.ico",
+		src=f"{rootPath}\\assets\\icons\\law.ico",
 		width=100,
 		height=70
 		)
@@ -63,9 +63,9 @@ def main(page: ft.Page):
 	)
 
     #Headers
-    headerDueno = it.banner("Datos del Dueño", f"{rootPath}\\datosDueno.ico")
-    headerCliente = it.banner("Datos del Cliente", f"{rootPath}\\datosCliente.ico")
-    headerContrato = it.banner("Datos del Contrato", f"{rootPath}\\datosContrato.ico")
+    headerDueno = it.banner("Datos del Dueño", f"{rootPath}\\assets\\icons\\datosDueno.ico")
+    headerCliente = it.banner("Datos del Cliente", f"{rootPath}\\assets\\icons\\datosCliente.ico")
+    headerContrato = it.banner("Datos del Contrato", f"{rootPath}\\assets\\icons\\datosContrato.ico")
 
     # ! Formulario
     
