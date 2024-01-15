@@ -1,7 +1,22 @@
-# Redacción pendiente...
+# __Generador de Iconos via CMD__
 
-> [!NOTE]
-> flet run gui.py -d  
-> https://www.google.com/search?q=PALETA+DE+COLORES+EVANGELION&oq=PALETA+DE+COLORES+EVANGELION&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDM2MDJqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8#vhid=AtCdkiUGBWO-JM&vssid=3981:W1Ub2nhe3-HmMM
+Este programa busca generar contratos de arrendamiento buscando palabras clave y remplazarlas dentro del contrato en base a los datos introducidos dentro del programa.
+
+## Requerimentos
+```bash
+pip install -r assets\requeriments
+```
+
+## Instrucciones de Instalación
+
+No es necesario instalar, es una aplicación portable.
+
+## Guia de uso
+
+Seguir las instrucciones dentro del programa.
+
+## _Notas Personales_
+> [!NOTE] Tutoriales FLET
+> flet -r <archivo.py> -d  
 > https://www.youtube.com/watch?v=bjuinw-bLK0&list=PL2PZw96yQChyD79_mtqY_oBdyiCdRJnJa&index=1
 > https://flet.dev/docs/guides/python/packaging-desktop-app

@@ -35,16 +35,16 @@ class textInput(UserControl):
 
 #Banners
 class banner(UserControl):    
-    def __init__(self, title: str, iconName:str) -> None:
+    def __init__(self, title: str, iconPath:str) -> None:
         """_summary_
 
         Args:
             title (str): Titulo del banner
-            iconName (str): Nombre del icono con extensión, los iconos disponibles se encuentran en /assets/icons
+            iconPath (str): Ruta del icono
         """        
         super().__init__()
         self.title = title
-        self.iconName = iconName
+        self.iconPath = iconPath
         self.banner = None  # Añade un atributo para almacenar la instancia de TextField
 
     
@@ -62,7 +62,7 @@ class banner(UserControl):
 
         Container(
             content=Image(
-            src=f"assets\\icons\\{self.iconName}",
+            src=f"assets\\icons\\{self.iconPath}",
             width=50,
             height=50
 		)),

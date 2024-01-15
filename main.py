@@ -63,9 +63,9 @@ def main(page: ft.Page):
 	)
 
     #Headers
-    headerDueno = it.banner("Datos del Dueño", "datosDueno.ico")
-    headerCliente = it.banner("Datos del Cliente", "datosCliente.ico")
-    headerContrato = it.banner("Datos del Contrato", "datosContrato.ico")
+    headerDueno = it.banner("Datos del Dueño", f"{rootPath}\\datosDueno.ico")
+    headerCliente = it.banner("Datos del Cliente", f"{rootPath}\\datosCliente.ico")
+    headerContrato = it.banner("Datos del Contrato", f"{rootPath}\\datosContrato.ico")
 
     # ! Formulario
     
