@@ -1,4 +1,4 @@
-# __Generador de Iconos via CMD__
+# __Generador de contratos__
 
 Este programa busca generar contratos de arrendamiento buscando palabras clave y remplazarlas dentro del contrato en base a los datos introducidos dentro del programa.
 
